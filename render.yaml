@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: directus
+    env: docker
+    repo: https://github.com/brahim2004MM/directus-on-render
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: ADMIN_EMAIL
+        value: admin@example.com
+      - key: ADMIN_PASSWORD
+        value: strongpassword123
+      - key: SECRET
+        generateValue: true
+      - key: DB_CLIENT
+        value: sqlite
